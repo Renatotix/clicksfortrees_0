@@ -1,0 +1,110 @@
+body{
+    background: radial-gradient(circle, #22ff00, #a4ff5a);
+    position: relative;
+
+}
+.marca{
+    color: white;
+    margin-bottom: 10px;
+    font-size: 60px;
+    font-family: cursive;
+    text-shadow: 
+        -2px -2px 0 black,  
+         2px -2px 0 black,
+        -2px  2px 0 black,
+         2px  2px 0 black;
+}
+.textos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.logo{
+    text-align: center;
+}
+.empresa{
+    color: darkgreen;
+    font-family: cursive;
+    margin-top: -22px;
+    margin-left: 400px;
+    font-size: 25px;
+}
+.registro{
+    width: 300px;
+    height: 270px;
+    background-color: #0f5c00b2;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    margin-top: 100px;
+    border-radius: 10px;
+    border-width: 2px;
+    border: black;
+}
+.ingreso{
+    display: inline-block;
+    margin-top: 7%;
+    margin-left: 37%;
+    transform: translateX(-50%);
+    background-color: rgb(0, 247, 41);
+    color: white;
+    border: none;
+    font-family: cursive;
+    padding: 10px 40px;
+    font-size: 16px;
+    border-radius: 9px;
+    cursor: pointer; 
+    transition: background-color 0.3s;
+}
+.ingreso:hover{
+    background-color: rgb(60, 255, 0);
+}
+.nuevacuenta{
+    text-align: center;
+    color: rgb(43, 255, 0);
+}
+.nuevacuenta1{
+    color: rgb(21, 255, 0);
+}
+.form-group{
+    text-align: start;
+    padding-top: 17px;
+    padding-left: 22%;
+}
+.sesion{
+    margin-bottom: -15px;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #ffffff;
+    text-shadow: 
+        -2px -2px 0 black,  
+         2px -2px 0 black,
+        -2px  2px 0 black,
+         2px  2px 0 black;
+}
+.registrarse{
+    text-align: center;
+    color: white;
+    font-family: cursive;
+}
+.parrafos{
+    text-align: center;
+    width: 300px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: -69px;
+    margin-top: -30px;
+    font-family: cursive;
+}
+.inicios{
+    color: white;
+    font-family: cursive;
+}
+.bloque{
+    border-radius: 5px;
+    margin-top: 2px;
+}
+.registracion{
+    color: greenyellow;
+}
