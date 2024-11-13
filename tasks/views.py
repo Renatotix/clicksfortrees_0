@@ -21,8 +21,9 @@ def register(request):
                 return redirect('clicker')
             except IntegrityError:
                 return render(request, 'register.html', {"form": UserCreationForm, "error": "Username already exists."})
-
-        return render(request, 'register.html', {"form": User, "error": "Passwords did not match."})
+        else:
+            form = UserCreationForm()
+            return render(request, 'register.html', {"form": form, "error":"Password do not match"})
 
 
 def signin(request):
@@ -36,13 +37,16 @@ def signin(request):
         else:
             login(request, user)
             return redirect('clicker')
-        
+
+
 def signout(request):
     logout(request)
     return redirect('signin')
 
+
 def home(request):
     return render(request, 'home.html')
+
 
 def clicker(request):
     return render(request, 'clicker.html')
