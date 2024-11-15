@@ -6,20 +6,20 @@
 
 <!DOCTYPE html>
 <html lang="es">
-
-<head>
-    <title>Clicks for Trees</title>
+  <head>
+    <title>ClickforTrees</title>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
-</head>
-
-<body onclick="contar()">
-    <h1>Clicks for Trees</h1>
+  </head>
+  <body>
+    <h1>ClickForTrees</h1>
     <p>Clicks: <span id="contador">0</span></p>
-
+    
     <div id="mensaje" class="mensaje-oculto">¡Gracias a ti, plantamos un arbolito!</div>
     <script src="{% static 'js/contador.js' %}"></script>
-</body>
-
+    <div class="arbolito" id="contador" onclick="contar()">
+      <img src="{% static 'jpg/arbol.png' %}" alt="" width="300">
+    </div>
+  </body>
 </html>
 
 {% endblock %}
