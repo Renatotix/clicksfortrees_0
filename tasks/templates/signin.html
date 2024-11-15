@@ -1,4 +1,3 @@
-
 {% extends 'base.html' %}
 
 {% block content %}
@@ -28,7 +27,7 @@
     </div>
     <div class="registro">
         <h1 class="sesion">Inicia sesión</h1>
-        <form class="formulario" method= "POST">
+        <form class="formulario" method="POST">
             {% csrf_token %}
             {{error}}
             <div class="form-group">
@@ -41,7 +40,8 @@
                 <button class="ingreso" onclick="location.href='. /register ';">Log in</button>
             </div>
             <div class="registrarse">
-                <p>Si no tienes cuenta, <a href="#" class="registracion" onclick=redireccionarRegistro()>Registrate!</a></p>
+                <p>Si no tienes cuenta, <a href="#" class="registracion" onclick=redireccionarRegistro()>Registrate!</a>
+                </p>
             </div>
             <script>
                 function redireccionarRegistro() {

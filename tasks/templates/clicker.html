@@ -1,5 +1,25 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1>Aqui esta su arbolito</h1>
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Clicks for Trees</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body onclick="contar()">
+    <h1>Clicks for Trees</h1>
+    <p>Clicks: <span id="contador">0</span></p>
+
+    <div id="mensaje" class="mensaje-oculto">¡Gracias a ti, plantamos un arbolito!</div>
+    <script src="{% static 'js/contador.js' %}"></script>
+</body>
+
+</html>
+
 {% endblock %}
