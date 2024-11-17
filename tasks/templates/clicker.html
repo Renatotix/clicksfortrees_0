@@ -1,5 +1,3 @@
-{% extends 'base.html' %}
-
 {% block content %}
 
 {% load static %}
@@ -12,13 +10,23 @@
   </head>
   <body>
     <h1>ClickForTrees</h1>
-    <p>Clicks: <span id="contador">0</span></p>
+    <p>Clicks: <span id="contador">{{ clicks }}</span></p>
+    <p>Árboles Plantados: <span id="arboles">{{ trees_planted }}</span></p>
     
-    <div id="mensaje" class="mensaje-oculto">¡Gracias a ti, plantamos un arbolito!</div>
+    {% if mensaje %}
+      <div id="mensaje" class="mensaje-visible">{{ mensaje }}</div>
+    {% else %}
+      <div id="mensaje" class="mensaje-oculto"></div>
+    {% endif %}
+
+    <form method="post" id="form-click">
+        {% csrf_token %}
+        <button type="submit" class="arbolito">
+            <img src="{% static 'jpg/arbol.png' %}" alt="Árbol" width="300">
+        </button>
+    </form>
+
     <script src="{% static 'js/contador.js' %}"></script>
-    <div class="arbolito" id="contador" onclick="contar()">
-      <img src="{% static 'jpg/arbol.png' %}" alt="" width="300">
-    </div>
   </body>
 </html>
 

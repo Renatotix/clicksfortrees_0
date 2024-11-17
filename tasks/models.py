@@ -2,25 +2,16 @@ from django.db import models
 
 from django.contrib.auth.models import User
 
-class TreeType(models.Model):
-    name = models.CharField(max_length=100)
-    skin_image = models.ImageField(upload_to='skins/')  # Imagen de la skin
+class UserClick(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    clicks = models.IntegerField(default=0)
+    trees_planted = models.IntegerField(default=0)
 
     def __str__(self):
-        return self.name
+        return f"{self.user.username} - Clicks: {self.clicks}, Trees: {self.trees_planted}"
 
-class Planting(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
-    tree_type = models.ForeignKey(TreeType, on_delete=models.SET_NULL, null=True)
-    timestamp = models.DateTimeField(auto_now_add=True)
-
-    def __str__(self):
-        return f"{self.user.username} planted {self.tree_type.name}"
-
-class Reward(models.Model):
-    tree_type = models.ForeignKey(TreeType, on_delete=models.CASCADE)
-    required_plantings = models.PositiveIntegerField()  # Ej. 100 plantaciones para desbloquear
-    unlocked_by = models.ManyToManyField(User, blank=True)
-
-    def __str__(self):
-        return f"Reward for {self.required_plantings} plantings of {self.tree_type.name}"
+    def add_click(self):
+        self.clicks += 1
+        if self.clicks % 10 == 0:  # Por ejemplo, cada 10 clics se planta un árbol
+            self.trees_planted += 1
+        self.save()
