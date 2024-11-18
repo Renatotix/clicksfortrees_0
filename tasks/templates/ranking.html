@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <section class="ranking">
+        <div class="container">
+            <h1>Ranking de los 5 Mejores Usuarios por Árboles Plantados</h1>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Posición</th>
+                            <th>Usuario</th>
+                            <th>Árboles Plantados</th>
+                            <th>Fecha de Registro</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for userclick in top_users %}
+                            <tr>
+                                <td>{{ forloop.counter }}</td> <!-- Muestra la posición en el ranking -->
+                                <td>{{ userclick.user.username }}</td> <!-- Nombre de usuario -->
+                                <td>{{ userclick.trees_planted }}</td> <!-- Árboles plantados -->
+                                <td>{{ userclick.user.date_joined }}</td> <!-- Fecha de registro -->
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+{% endblock %}

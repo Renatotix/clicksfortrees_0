@@ -1,33 +1,25 @@
+{% extends 'base.html' %}
+
 {% block content %}
+    <section class="clicker">
+        <div class="container">
+            <h1>Click for Trees</h1>
+            
+            <div class="status">
+                <p><strong>Clicks:</strong> <span id="contador">{{ clicks }}</span></p>
+                <p><strong>Árboles Plantados:</strong> <span id="arboles">{{ trees_planted }}</span></p>
+            </div>
 
-{% load static %}
+            <form method="POST" id="form-click" class="click-form">
+                {% csrf_token %}
+                <button type="submit" class="arbolito">
+                  {% load static %}
+                    <img src="{% static 'png/arbol1.png' %}" alt="Árbol" width="300">
+                </button>
+            </form>
+        </div>
+    </section>
 
-<!DOCTYPE html>
-<html lang="es">
-  <head>
-    <title>ClickforTrees</title>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
-  </head>
-  <body>
-    <h1>ClickForTrees</h1>
-    <p>Clicks: <span id="contador">{{ clicks }}</span></p>
-    <p>Árboles Plantados: <span id="arboles">{{ trees_planted }}</span></p>
-    
-    {% if mensaje %}
-      <div id="mensaje" class="mensaje-visible">{{ mensaje }}</div>
-    {% else %}
-      <div id="mensaje" class="mensaje-oculto"></div>
-    {% endif %}
-
-    <form method="post" id="form-click">
-        {% csrf_token %}
-        <button type="submit" class="arbolito">
-            <img src="{% static 'jpg/arbol.png' %}" alt="Árbol" width="300">
-        </button>
-    </form>
-
+    <!-- Agregar el script al final -->
     <script src="{% static 'js/contador.js' %}"></script>
-  </body>
-</html>
-
 {% endblock %}

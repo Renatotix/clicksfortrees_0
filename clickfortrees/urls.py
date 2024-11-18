@@ -23,7 +23,9 @@ urlpatterns = [
     path('', views.home, name='home'),
     path('signin/', views.signin, name='signin'),
     path('register/', views.register, name='register'),
-    path('click/', views.click_view, name='click_view'),
+    path('clicker/', views.click, name='clicker'),
     path('logout/', views.signout, name='signout'),
+    path("store/",views.store, name="store"),
+    path("ranking/",views.ranking, name= "ranking")
     
 ] 

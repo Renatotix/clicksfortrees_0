@@ -1,0 +1,544 @@
+/* Estilos Generales */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f8f4; /* Fondo claro, verde suave */
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  margin: 0;
+  font-size: 2rem;
+  color: #2d6a4f; /* Verde oscuro */
+}
+
+/* Header (barra de navegación) */
+header {
+  background-color: #4caf50; /* Verde bosque */
+  color: white;
+  padding: 15px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header .logo h1 {
+  margin-left: 20px;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  text-transform: uppercase;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Hover Effects */
+nav ul li a:hover {
+  background-color: #2d6a4f; /* Verde oscuro al pasar el ratón */
+  color: #fff;
+}
+
+/* Estilos Responsivos */
+@media (max-width: 768px) {
+  header {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  nav ul {
+      flex-direction: column;
+      margin-top: 10px;
+  }
+
+  nav ul li {
+      margin: 5px 0;
+  }
+}
+
+/* Variables de colores */
+:root {
+  --primary-color: #4CAF50; /* Verde */
+  --secondary-color: #333333; /* Gris oscuro */
+  --accent-color: #FF9800; /* Naranja */
+  --background-color: #f9f9f9; /* Fondo gris claro */
+  --white-color: #ffffff; /* Blanco */
+  --text-color: #333333;
+}
+
+/* Reset de márgenes y rellenos */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilo global */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Estilo para la sección del Ranking */
+.ranking {
+  background-color: var(--white-color);
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.ranking h1 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: var(--primary-color);
+}
+
+/* Contenedor de la tabla */
+.table-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  overflow-x: auto;
+}
+
+/* Estilos de la tabla */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 auto;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+table th, table td {
+  padding: 12px 15px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+table th {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  font-size: 1.1rem;
+}
+
+table td {
+  background-color: var(--white-color);
+}
+
+table tr:nth-child(even) td {
+  background-color: #f9f9f9;
+}
+
+/* Estilos de hover en la tabla */
+table tr:hover td {
+  background-color: var(--accent-color);
+  color: var(--white-color);
+  cursor: pointer;
+}
+
+/* Estilo para los encabezados de la tabla */
+table th {
+  font-weight: bold;
+}
+
+/* Responsividad */
+@media screen and (max-width: 768px) {
+  table th, table td {
+      padding: 10px;
+      font-size: 0.9rem;
+  }
+}
+
+/*estilos para clicker/*
+
+/* Estilo general para la página de "Click for Trees" */
+.clicker {
+  background-color: var(--background-color);
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.clicker .container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Estilo del título */
+.clicker h1 {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 40px;
+}
+
+/* Estilo para la sección de estado (Clicks y Árboles Plantados) */
+.status {
+  margin-bottom: 40px;
+  font-size: 1.2rem;
+  color: var(--secondary-color);
+}
+
+.status p {
+  margin-bottom: 10px;
+}
+
+/* Estilos para el formulario de clics */
+.click-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px; /* Espacio superior adicional */
+}
+
+/* Botón de clic (sin fondo naranja y subiendo la imagen) */
+.arbolito {
+  background: none; /* Sin fondo */
+  border: none;
+  padding: 0; /* Sin relleno adicional */
+  margin-top: -10px; /* Subimos la imagen un poco */
+  cursor: pointer; /* Para que el puntero cambie al pasar el ratón */
+  transition: transform 0.3s ease;
+}
+
+.arbolito img {
+  max-width: 100%;
+  border-radius: 5px;
+  display: block; /* Asegura que la imagen se trate como un bloque */
+  margin: 0 auto; /* Centra la imagen dentro del contenedor */
+}
+
+.arbolito:hover {
+  transform: scale(1.1); /* Efecto de aumento cuando se pasa el ratón */
+}
+
+/* Responsividad */
+@media screen and (max-width: 768px) {
+  .clicker h1 {
+      font-size: 2rem;
+  }
+
+  .status {
+      font-size: 1rem;
+  }
+
+  .arbolito {
+      padding: 15px;
+  }
+}
+
+/* Estilo general para la página de inicio */
+.inicio {
+  background-color: var(--background-color);
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.inicio .container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Estilo del título */
+.inicio h1 {
+  font-size: 2.8rem;
+  color: var(--primary-color);
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+/* Estilo de los párrafos de introducción */
+.inicio .introduccion {
+  font-size: 1.2rem;
+  color: var(--secondary-color);
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+/* Estilo para la imagen */
+.inicio .imagen {
+  margin: 40px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inicio #imagen-arboles {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+/* Estilo para el detalle adicional */
+.inicio .detalle {
+  font-size: 1.2rem;
+  color: var(--secondary-color);
+  margin-bottom: 40px;
+  line-height: 1.6;
+}
+
+/* Estilo para el bloque de llamada a la acción */
+.inicio .cta {
+  margin-top: 40px;
+}
+
+.inicio .cta p {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+.inicio .cta .btn-primary {
+  background-color: var(--accent-color);
+  color: white;
+  font-size: 1.2rem;
+  padding: 15px 30px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.inicio .cta .btn-primary:hover {
+  background-color: var(--primary-color);
+}
+
+/* Responsividad */
+@media screen and (max-width: 768px) {
+  .inicio h1 {
+      font-size: 2.2rem;
+  }
+
+  .inicio .introduccion, .inicio .detalle {
+      font-size: 1rem;
+  }
+
+  .inicio .cta p {
+      font-size: 1.2rem;
+  }
+
+  .inicio .cta .btn-primary {
+      padding: 12px 25px;
+  }
+}
+
+/* Estilo general para la página de inicio de sesión */
+.inicio-sesion {
+  background-color: var(--background-color);
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.inicio-sesion .container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Estilo del logo y título */
+.logo .marca {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+.logo .empresa {
+  font-size: 1.2rem;
+  color: var(--secondary-color);
+  margin-top: 5px;
+}
+
+/* Estilo de la descripción del proyecto */
+.descripcion .parrafo {
+  font-size: 1.2rem;
+  color: var(--secondary-color);
+  margin: 20px 0;
+  line-height: 1.6;
+}
+
+/* Estilo del formulario */
+.registro {
+  margin-top: 40px;
+}
+
+.registro h1.sesion {
+  font-size: 2.2rem;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+.formulario {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.inicios {
+  font-size: 1.1rem;
+  color: var(--primary-color);
+}
+
+.bloque {
+  width: 100%;
+  padding: 12px;
+  margin-top: 5px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.bloque:focus {
+  border-color: var(--primary-color);
+  outline: none;
+}
+
+/* Estilo general para la página de inicio de sesión */
+.inicio-sesion {
+  background-color: var(--background-color);
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.inicio-sesion .container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Estilo del logo y título */
+.logo .marca {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+.logo .empresa {
+  font-size: 1.2rem;
+  color: var(--secondary-color);
+  margin-top: 5px;
+}
+
+/* Estilo de la descripción del proyecto */
+.descripcion .parrafo {
+  font-size: 1.2rem;
+  color: var(--secondary-color);
+  margin: 20px 0;
+  line-height: 1.6;
+}
+
+/* Estilo del formulario */
+.registro {
+  margin-top: 40px;
+}
+
+.registro h1.sesion {
+  font-size: 2.2rem;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+.formulario {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.inicios {
+  font-size: 1.1rem;
+  color: var(--primary-color);
+}
+
+.bloque {
+  width: 100%;
+  padding: 12px;
+  margin-top: 5px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.bloque:focus {
+  border-color: var(--primary-color);
+  outline: none;
+}
+
+/* Estilo del botón de inicio de sesión */
+.boton .ingreso {
+  background-color: var(--accent-color);
+  color: white;
+  font-size: 1.2rem;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.boton .ingreso:hover {
+  background-color: var(--primary-color);
+}
+
+/* Enlace para registrarse */
+.registrarse p {
+  font-size: 1.1rem;
+  color: var(--secondary-color);
+  margin-top: 20px;
+}
+
+.registracion {
+  color: var(--accent-color);
+  font-weight: bold;
+}
+
+.registracion:hover {
+  text-decoration: underline;
+}
+
+/* Responsividad */
+@media screen and (max-width: 768px) {
+  .inicio-sesion h1.sesion {
+      font-size: 1.8rem;
+  }
+
+  .formulario {
+      padding: 30px;
+  }
+
+  .bloque {
+      font-size: 0.95rem;
+  }
+
+  .boton .ingreso {
+      padding: 12px 25px;
+  }
+}

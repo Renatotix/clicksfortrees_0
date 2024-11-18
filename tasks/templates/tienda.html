@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Tienda</h1>
+<p>Árboles disponibles: {{ usuario.perfil.arboles_plantados }}</p>
+
+{% if error %}
+    <p class="error">{{ error }}</p>
+{% endif %}
+
+<ul>
+{% for skin in skins %}
+    <li>
+        <h2>{{ skin.nombre }}</h2>
+        <p>{{ skin.descripcion }}</p>
+        <p>Costo: {{ skin.costo_en_arboles }} árboles</p>
+        <form method="post">
+            {% csrf_token %}
+            <input type="hidden" name="skin_id" value="{{ skin.id }}">
+            <button type="submit">Comprar</button>
+        </form>
+    </li>
+{% endfor %}
+</ul>
+
+{% endblock %}

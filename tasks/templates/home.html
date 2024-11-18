@@ -1,8 +1,28 @@
-{% extends 'base.html'%}
+{% extends 'base.html' %}
 
 {% block content %}
+{% load static %}
+    <section class="inicio">
+        <div class="container">
+            <h1>La Importancia de Plantar Árboles</h1>
 
-<h1>Bienvenido a Clicks for Trees</h1>
-<p>Haz clic para plantar árboles y contribuir al medio ambiente.</p>
+            <p class="introduccion">
+                Los árboles son esenciales para la vida en nuestro planeta. No solo son vitales para la biodiversidad, sino que también juegan un papel fundamental en la lucha contra el cambio climático. Plantar árboles es una de las acciones más efectivas que podemos realizar para proteger el medio ambiente, mejorar la calidad del aire y crear un futuro más sostenible.
+            </p>
 
+            <div class="imagen">
+                <!-- Espacio reservado para la imagen -->   
+                <img src="{% static 'png/bosque.jpeg' %}" alt="Árboles" id="imagen-arboles">
+            </div>
+
+            <p class="detalle">
+                Cada árbol plantado contribuye a la captación de carbono, mejora la biodiversidad local y proporciona un hábitat para muchos seres vivos. Además, los árboles son una fuente de oxígeno y ayudan a reducir el calor en las ciudades. ¡Cada acción cuenta!
+            </p>
+
+            <div class="cta">
+                <p>¡Únete a nosotros y empieza a plantar árboles hoy mismo!</p>
+                <a href="{% url 'ranking' %}" class="btn-primary">Ver el ranking de usuarios</a>
+            </div>
+        </div>
+    </section>
 {% endblock %}

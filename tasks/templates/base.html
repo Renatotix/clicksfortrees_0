@@ -1,32 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ClickforTrees</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
 </head>
 <body>
-    <nav>
-        <ul>
-            <li>
-                <a href="/" >home</a>
-            </li>
-            {% if user.is_authenticated %}
+    <header>
+        <div class="logo">
+            <h1>ClickforTrees</h1>
+        </div>
+        <nav>
+            <ul>
                 <li>
-                    <a href="/logout" >logout
-                    </a>
+                    <a href="/" class="nav-link">Home</a>
                 </li>
-                <li>
-                    <a href="/clicker" >clicker</a>
-                </li>
-            {% else %}
-                <li>
-                    <a href="/signin" >signin</a>
-                </li>
-            {% endif %}
-        </ul>
-    </nav>
-    {% block content %}
-    {% endblock %}
+                {% if user.is_authenticated %}
+                    <li>
+                        <a href="/logout" class="nav-link">Logout</a>
+                    </li>
+                    <li>
+                        <a href="/clicker" class="nav-link">Clicker</a>
+                    </li>
+                    <li>
+                        <a href="/store" class="nav-link">Store</a>
+                    </li>
+                    <li>
+                        <a href="/ranking" class="nav-link">Ranking</a>
+                    </li>
+                {% else %}
+                    <li>
+                        <a href="/signin" class="nav-link">Signin</a>
+                    </li>
+                {% endif %}
+            </ul>
+        </nav>
+    </header>
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
 </body>
 </html>
