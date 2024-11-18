@@ -40,7 +40,7 @@ def register(request):
                     request.POST["username"], password=request.POST["password1"])
                 user.save()
                 login(request, user)
-                return redirect('click_view')
+                return redirect('clicker')
             except IntegrityError:
                 return render(request, 'register.html', {"form": UserCreationForm, "error": "Username already exists."})
         else:
