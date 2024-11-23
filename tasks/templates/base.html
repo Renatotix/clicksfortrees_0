@@ -10,10 +10,10 @@
 <body>
     <header>
         <div class="logo">
-            <h1>ClickforTrees</h1>
+            <h1>ClickForTrees</h1>
         </div>
         <nav>
-            <ul>
+            <ul onclick="efecto()">
                 <li>
                     <a href="/" class="nav-link">Home</a>
                 </li>
@@ -42,5 +42,6 @@
         {% block content %}
         {% endblock %}
     </main>
+    <script src="{% static 'js/contador.js' %}"></script>
 </body>
 </html>

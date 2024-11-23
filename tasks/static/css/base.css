@@ -9,12 +9,12 @@ body {
 h1 {
   margin: 0;
   font-size: 2rem;
-  color: #2d6a4f; /* Verde oscuro */
+  color: #3a6a2d; /* Verde oscuro */
 }
 
 /* Header (barra de navegación) */
 header {
-  background-color: #4caf50; /* Verde bosque */
+  background: linear-gradient(to top,#8dfa75 ,#4caf50); /* Verde bosque */
   color: white;
   padding: 15px 0;
   display: flex;
@@ -25,6 +25,9 @@ header {
 
 header .logo h1 {
   margin-left: 20px;
+  font-family: cursive;
+  text-shadow: 2px 2px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
+  color: white;
 }
 
 nav ul {
@@ -51,7 +54,7 @@ nav ul li a {
 
 /* Hover Effects */
 nav ul li a:hover {
-  background-color: #2d6a4f; /* Verde oscuro al pasar el ratón */
+  background-color: #346a2d; /* Verde oscuro al pasar el ratón */
   color: #fff;
 }
 
@@ -76,8 +79,8 @@ nav ul li a:hover {
 :root {
   --primary-color: #4CAF50; /* Verde */
   --secondary-color: #333333; /* Gris oscuro */
-  --accent-color: #FF9800; /* Naranja */
-  --background-color: #f9f9f9; /* Fondo gris claro */
+  --accent-color: #6dd356; /* Naranja */
+  --background-color: #ffffff; /* Fondo gris claro */
   --white-color: #ffffff; /* Blanco */
   --text-color: #333333;
 }
@@ -103,7 +106,7 @@ h1, h2, h3 {
 
 /* Estilo para la sección del Ranking */
 .ranking {
-  background-color: var(--white-color);
+  background: linear-gradient(to top,#ffffff ,#a8ffaa);
   padding: 60px 20px;
   text-align: center;
 }
@@ -173,7 +176,7 @@ table th {
 
 /* Estilo general para la página de "Click for Trees" */
 .clicker {
-  background-color: var(--background-color);
+  background: linear-gradient(to top,#ffffff ,#a8ffaa);
   padding: 60px 20px;
   text-align: center;
 }
@@ -186,8 +189,10 @@ table th {
 /* Estilo del título */
 .clicker h1 {
   font-size: 2.5rem;
-  color: var(--primary-color);
+  color: #76e50f;
   margin-bottom: 40px;
+  font-family: cursive;
+  text-shadow: 2px 2px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
 }
 
 /* Estilo para la sección de estado (Clicks y Árboles Plantados) */
@@ -247,7 +252,7 @@ table th {
 
 /* Estilo general para la página de inicio */
 .inicio {
-  background-color: var(--background-color);
+  background: linear-gradient(to top,#ffffff ,#a8ffaa);
   padding: 60px 20px;
   text-align: center;
 }
@@ -260,9 +265,11 @@ table th {
 /* Estilo del título */
 .inicio h1 {
   font-size: 2.8rem;
-  color: var(--primary-color);
+  color: #76e50f;
   margin-bottom: 30px;
   font-weight: bold;
+  font-family: cursive;
+  text-shadow: 2px 2px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
 }
 
 /* Estilo de los párrafos de introducción */
@@ -282,8 +289,8 @@ table th {
 }
 
 .inicio #imagen-arboles {
-  max-width: 100%;
-  height: auto;
+  width: 300px;
+  height: 200px;
   border-radius: 10px;
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
   margin-bottom: 30px;
@@ -343,7 +350,7 @@ table th {
 
 /* Estilo general para la página de inicio de sesión */
 .inicio-sesion {
-  background-color: var(--background-color);
+  background: linear-gradient(to top,#ffffff ,#a8ffaa);
   padding: 60px 20px;
   text-align: center;
 }
@@ -431,14 +438,16 @@ table th {
 /* Estilo del logo y título */
 .logo .marca {
   font-size: 2.5rem;
-  color: var(--primary-color);
+  color: white;
   font-weight: bold;
+  text-shadow: 2px 2px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
 }
 
 .logo .empresa {
   font-size: 1.2rem;
   color: var(--secondary-color);
   margin-top: 5px;
+  font-family: cursive;
 }
 
 /* Estilo de la descripción del proyecto */
@@ -456,8 +465,9 @@ table th {
 
 .registro h1.sesion {
   font-size: 2.2rem;
-  color: var(--primary-color);
+  color: #22aa00;
   margin-bottom: 20px;
+  font-family: cursive;
 }
 
 .formulario {
@@ -541,4 +551,42 @@ table th {
   .boton .ingreso {
       padding: 12px 25px;
   }
+}
+.click-effect{
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-color: #73ff00;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  animation: fadeOut 0.6s ease-out forwards;
+}
+
+@keyframes fadeOut{
+  0% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(2);
+  }
+}
+img{
+  user-select: none;
+  -webkit-user-drag: none;
+}
+#miTexto{
+  transition: opacity 1s ease-in-out;
+  color: white;
+  text-shadow: 2px 2px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
+  font-weight: bold;
+}
+.bosques{
+  opacity: 0; /* Inicia con las imágenes invisibles */
+  transition: opacity 1s ease-in-out; /* Transición suave para el desvanecimiento */
+}
+.bosques.visible{
+  opacity: 1;
 }

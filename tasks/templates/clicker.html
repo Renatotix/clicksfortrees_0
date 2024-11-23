@@ -3,7 +3,7 @@
 {% block content %}
     <section class="clicker">
         <div class="container">
-            <h1>Click for Trees</h1>
+            <h1>ClickForTrees</h1>
             
             <div class="status">
                 <p><strong>Clicks:</strong> <span id="contador">{{ clicks }}</span></p>
@@ -12,7 +12,7 @@
 
             <form method="POST" id="form-click" class="click-form">
                 {% csrf_token %}
-                <button type="submit" class="arbolito">
+                <button type="submit" class="arbolito" onclick="efecto()">
                   {% load static %}
                     <img src="{% static 'png/arbol1.png' %}" alt="Árbol" width="300">
                 </button>

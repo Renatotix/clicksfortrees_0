@@ -4,15 +4,17 @@
 {% load static %}
     <section class="inicio">
         <div class="container">
-            <h1>La Importancia de Plantar Árboles</h1>
+            <h1>La Importancia De Plantar Árboles</h1>
 
-            <p class="introduccion">
-                Los árboles son esenciales para la vida en nuestro planeta. No solo son vitales para la biodiversidad, sino que también juegan un papel fundamental en la lucha contra el cambio climático. Plantar árboles es una de las acciones más efectivas que podemos realizar para proteger el medio ambiente, mejorar la calidad del aire y crear un futuro más sostenible.
+            <p class="introduccion" id="miTexto">
+                Los árboles son esenciales para la vida en nuestro planeta. No sólo son vitales para la biodiversidad, sino que también juegan un papel fundamental en la lucha contra el cambio climático. Plantar árboles es una de las acciones más efectivas que podemos realizar para proteger el medio ambiente, mejorar la calidad del aire y crear un futuro más sostenible.
             </p>
 
             <div class="imagen">
                 <!-- Espacio reservado para la imagen -->   
-                <img src="{% static 'png/bosque.jpeg' %}" alt="Árboles" id="imagen-arboles">
+                <img src="{% static 'png/bosque.jpeg' %}" alt="Árboles" id="imagen-arboles" width="500px" class="bosques visible">
+                <img src="{% static 'png/bosque1.jpg' %}" alt="Árboles" id="imagen-arboles" width="500px" class="bosques">
+                <img src="{% static 'png/bosque2.jpg' %}" alt="Árboles" id="imagen-arboles" width="500px" class="bosques">
             </div>
 
             <p class="detalle">
@@ -25,4 +27,5 @@
             </div>
         </div>
     </section>
+    <script src="{% static 'js/principal.js' %}"></script>
 {% endblock %}

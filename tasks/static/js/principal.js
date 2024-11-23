@@ -37,3 +37,23 @@ function cambiarTexto() {
 
 // Cambiar el texto cada 5 segundos
 setInterval(cambiarTexto, 9000); // Cambiar cada 5 segundos
+const imagenes = document.querySelectorAll('.bosques'); // Selecciona todas las imágenes
+let ind = 0; // Índice para llevar el control de la imagen actual
+
+// Función para cambiar las imágenes con animación
+function cambiarImagen() {
+    // Quitar la clase 'visible' de la imagen actual
+    imagenes[ind].classList.remove('visible');
+
+    // Incrementar el índice y reiniciar si es necesario
+    ind++;
+    if (ind === imagenes.length) {
+        ind = 0; // Reiniciar al principio
+      }
+
+      // Agregar la clase 'visible' a la nueva imagen
+      imagenes[ind].classList.add('visible');
+    }
+
+    // Cambiar la imagen cada 3 segundos (3000 ms)
+    setInterval(cambiarImagen, 4500);
